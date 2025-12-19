@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un utilisateur</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Ajouter un utilisateur</h1>
+<h2>Attention, ce service ne marche pas puisqu'on n'a pas la possibilité d'envoyer un nouvel utilisateur</h2>
+
+<form id="userForm">
+    <label for="nom">Nom</label>
+    <input type="text" id="nom" name="nom" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="submit">Enregistrer</button>
+</form>
+
+<a href="liste.html">Voir la liste des utilisateurs</a>
+
+<script>
+    document.getElementById("userForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const user = {
+            nom: document.getElementById("nom").value,
+            email: document.getElementById("email").value
+        };
+
+        // 🔗 Ici tu brancheras ton API (POST)
+        console.log("Utilisateur à envoyer à l'API :", user);
+    });
+</script>
+
+</body>
+</html>
