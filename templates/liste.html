@@ -27,7 +27,7 @@
 <script>
     async function loadUsers() {
         try {
-            const response = await fetch("https://dc222103-19af-4685-a7f1-51da9c4a8488-00-3ijsypv9qlhtt.picard.replit.dev/users");
+            const response = await fetch("/users");
 
             if (!response.ok) {
                 throw new Error("Erreur HTTP : " + response.status);
